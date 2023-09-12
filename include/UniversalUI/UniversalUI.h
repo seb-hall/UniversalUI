@@ -12,7 +12,7 @@
 namespace UniversalUI {
 
     bool initUniversalUI() {
-        
+        return true;
     }
 
 }

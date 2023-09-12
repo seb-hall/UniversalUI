@@ -51,14 +51,14 @@ namespace UniversalUI {
 
             RegisterClass(&wc);
 
-            windowHandle = CreateWindowEx(
+            windowHandle = CreateWindowExW(
                 0,                              // Optional window styles.
                 className,                     // Window class
-                L"Learn to Program Windows",    // Window text
+                L"UniversalUI Window",    // Window text
                 WS_OVERLAPPEDWINDOW,            // Window style
 
                 // Size and position
-                CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+                CW_USEDEFAULT, CW_USEDEFAULT, 800, 600,
 
                 NULL,       // Parent window    
                 NULL,       // Menu

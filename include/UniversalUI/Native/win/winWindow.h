@@ -18,17 +18,13 @@
 #include "UniversalUI/Windowing/uWindow.h"
 #include "UniversalUI/Native/nWindow.h"
 
-#include <Windows.h>
 
 
-PCWSTR className = L"UniversalUI Window";
 
 
-static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 
-        return DefWindowProc(hwnd, uMsg, wParam, lParam);
 
-}
+
 
 
 
@@ -43,28 +39,9 @@ namespace UniversalUI {
 
         winWindow() {
 
-            WNDCLASS wc = {0};
+            
 
-            wc.lpfnWndProc   = WindowProc;
-            wc.hInstance     = GetModuleHandle(NULL);
-            wc.lpszClassName = className;
-
-            RegisterClass(&wc);
-
-            windowHandle = CreateWindowExW(
-                0,                              // Optional window styles.
-                className,                     // Window class
-                L"UniversalUI Window",    // Window text
-                WS_OVERLAPPEDWINDOW,            // Window style
-
-                // Size and position
-                CW_USEDEFAULT, CW_USEDEFAULT, 800, 600,
-
-                NULL,       // Parent window    
-                NULL,       // Menu
-                GetModuleHandle(NULL),  // Instance handle
-                NULL        // Additional application data
-            );  
+            
         }
 
         void Show() override {

@@ -9,12 +9,12 @@
 #ifndef UNIVERSALUI_H
 #define UNIVERSALUI_H
 
-namespace UniversalUI {
+#include "UniversalUI/Window/uWindow.h"
+#include "UniversalUI/Application/uApplication.h"
+#include "UniversalUI/Misc/Types.h"
 
-    bool initUniversalUI() {
-        return true;
-    }
 
-}
+int UniversalUI(uApplication* app);
+
 
 #endif // UNIVERSALUI_H

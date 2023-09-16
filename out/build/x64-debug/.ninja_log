@@ -1,6 +1,0 @@
-# ninja log v5
-1	91	7162540544691855	build.ninja	c584988c578d26fe
-1	285	7162541239238253	CMakeFiles/UniversalUI.dir/test/main.cpp.obj	5b52faaf166fa777
-286	462	7162541240888210	UniversalUI.exe	614101aeb5bfd1b
-7	294	7162544868431997	CMakeFiles/UniversalUI.dir/test/main.cpp.obj	5b52faaf166fa777
-294	383	7162544869065516	UniversalUI.exe	614101aeb5bfd1b

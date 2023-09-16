@@ -7,19 +7,34 @@
 //  cross-platform API.
 
 #include "UniversalUI/UniversalUI.h"
-#include "UniversalUI/Native/win/winWindow.h"
 
-using namespace UniversalUI;
 
-int main() {
+#include <stdio.h>
 
-    winWindow window;
+class TestApp : public uApplication {
 
-    window.Show();
+public:
 
-    while (true) {
+    TestApp() {
+        title = "TestApp";
+        developer = "Test Developer";
+    }
+
+    void ApplicationLaunched() override {
+        printf("TEST APP LAUNCHED\n");
+
+        uWindow* window1 = new uWindow("my window 1");
+        windows.push_back(window1);
+
+        uWindow* window2 = new uWindow("my window 2");
+        windows.push_back(window2);
+
         
     }
 
-    return 0;
+};
+
+int main() {
+
+    return UniversalUI(new TestApp());
 }

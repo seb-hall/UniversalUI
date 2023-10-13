@@ -17,6 +17,25 @@
 
 
 class uWindow {
+public:
+
+    uWindowHandle handle;
+    uSize size;
+
+    bool forceSmoothResize;
+
+    int displayWidth;
+    int displayHeight;
+
+
+    uWindow(string title, uSize size);
+
+    void PollEvents();
+
+    virtual void Resized(uSize newSize);
+    virtual void Render();
+
+private:
 
     //  0 - untested, -1 error, 1 success
     static int POSTResult;
@@ -35,18 +54,7 @@ class uWindow {
     static void RequestDeviceCallback(WGPURequestDeviceStatus status,
         WGPUDevice device, char const* message,
         void* userdata);
-public:
 
-    uWindowHandle handle;
-    uRect frame;
-
-    uWindow(string title);
-
-    void Show();
-    void PollEvents();
-
-    void Size(uSize newSize);
-    void Render();
 };
 
 

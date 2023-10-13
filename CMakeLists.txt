@@ -20,6 +20,19 @@ set(TEST_DIR ${CMAKE_SOURCE_DIR}/test)
 file(GLOB SOURCE_FILES ${SOURCE_DIR}/*.cpp)
 file(GLOB TEST_FILES ${SOURCE_DIR}/*.cpp ${TEST_DIR}/*.cpp)
 
+add_library(UniversalUI SHARED ${SOURCE_FILES})
+target_include_directories(UniversalUI PUBLIC ${CMAKE_SOURCE_DIR}/include/UniversalUI/ ${CMAKE_SOURCE_DIR}/include/)
+target_link_libraries(UniversalUI ${CMAKE_SOURCE_DIR}/lib/wgpu_native.lib)
+target_link_libraries(UniversalUI user32.lib)
+target_link_libraries(UniversalUI gdi32.lib)
+target_link_libraries(UniversalUI advapi32.lib)
+target_link_libraries(UniversalUI ws2_32.lib)
+target_link_libraries(UniversalUI d3dcompiler.lib)
+target_link_libraries(UniversalUI Bcrypt.lib)
+target_link_libraries(UniversalUI ntdll.lib)
+target_link_libraries(UniversalUI Userenv.lib)
+
+#[===[
 # Add source to this project's executable.
 add_executable (UniversalUI ${SOURCE_FILES} ${TEST_FILES})
 
@@ -36,3 +49,4 @@ target_link_libraries(UniversalUI d3dcompiler.lib)
 target_link_libraries(UniversalUI Bcrypt.lib)
 target_link_libraries(UniversalUI ntdll.lib)
 target_link_libraries(UniversalUI Userenv.lib)
+]===]

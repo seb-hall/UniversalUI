@@ -23,10 +23,12 @@ public:
     void ApplicationLaunched() override {
         printf("TEST APP LAUNCHED\n");
 
-        uWindow* window1 = new uWindow("my window 1");
+        uWindow* window1 = new uWindow("my window 1", {800.0f, 600.0f});
+        window1->forceSmoothResize = true;
         windows.push_back(window1);
 
-        uWindow* window2 = new uWindow("my window 2");
+        uWindow* window2 = new uWindow("my window 2", {800.0f, 600.0f});
+        window2->forceSmoothResize = false;
         windows.push_back(window2);
 
         

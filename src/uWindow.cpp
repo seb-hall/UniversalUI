@@ -43,11 +43,27 @@ int uWindow::POSTResult;
 
 		switch (uMsg) {
 		case WM_SIZE: {
+
 			int width = LOWORD(lParam);    // Extract the low-order word (width)
 			int height = HIWORD(lParam);   // Extract the high-order word (height)
 
-			window->frame = { (float) 0, (float) 0, (float) width, (float) height };
-			window->Size({ (float)width, (float)height });
+			window->size = { (float) width, (float) height };
+
+			if (window->forceSmoothResize) {
+				// get desktop rect
+				RECT desktopRect;
+				GetWindowRect(GetDesktopWindow(), &desktopRect);
+
+				if (window->displayWidth != desktopRect.right || window->displayHeight != desktopRect.bottom) {
+					// monitor changed
+					window->displayWidth = desktopRect.right;
+					window->displayHeight = desktopRect.bottom;
+					window->Resized({ (float)width, (float)height });
+				}
+
+			} else {
+				window->Resized({ (float)width, (float)height });
+			}
 			return DefWindowProc(hwnd, uMsg, wParam, lParam);
 		}
 		case WM_PAINT: {
@@ -66,7 +82,9 @@ int uWindow::POSTResult;
 #endif // _WIN32
 
 
-uWindow::uWindow(string title) {
+uWindow::uWindow(string title, uSize size) {
+
+	this->size = size;
 
 	//	check if post has been run
 	if (POSTResult == 0) {
@@ -113,7 +131,7 @@ uWindow::uWindow(string title) {
 			WS_OVERLAPPEDWINDOW,            // Window style
 
 			// Size and position
-			CW_USEDEFAULT, CW_USEDEFAULT, 800, 600,
+			CW_USEDEFAULT, CW_USEDEFAULT, (int)size.width, (int)size.height,
 
 			NULL,       // Parent window    
 			NULL,       // Menu
@@ -121,7 +139,10 @@ uWindow::uWindow(string title) {
 			NULL        // Additional application data
 		);
 		SetWindowLongPtr(handle.rawHandle, GWLP_USERDATA, (LONG_PTR)this);
-		
+
+
+
+
 		WGPUInstanceDescriptor instanceDescriptor = {};
 		
 		instance = wgpuCreateInstance(&instanceDescriptor);
@@ -187,7 +208,7 @@ uWindow::uWindow(string title) {
 }
 
 
-void uWindow::Size(uSize newSize) { 
+void uWindow::Resized(uSize newSize) { 
 
 	if (swapchain) {
 		wgpuSwapChainRelease(swapchain);
@@ -203,8 +224,14 @@ void uWindow::Size(uSize newSize) {
 	swapchainDescriptor.usage = WGPUTextureUsage_RenderAttachment;
 	swapchainDescriptor.format = WGPUTextureFormat_BGRA8Unorm;
 	swapchainDescriptor.presentMode = WGPUPresentMode_Fifo;
-	swapchainDescriptor.width = (uint32_t)newSize.width;
-	swapchainDescriptor.height = (uint32_t)newSize.height;
+
+	if (forceSmoothResize) {
+		swapchainDescriptor.width = displayWidth;
+		swapchainDescriptor.height = displayHeight;
+	} else {
+		swapchainDescriptor.width = (uint32_t)newSize.width;
+		swapchainDescriptor.height = (uint32_t)newSize.height;
+	}
 
 	WGPUSurfaceDescriptor surfaceDescriptor = {};
 

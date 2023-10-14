@@ -9,24 +9,24 @@
 #ifndef UAPPLICATION_H
 #define UAPPLICATION_H
 
-#include "UniversalUI/Misc/Types.h"
 #include "UniversalUI/Window/uWindow.h"
 
-class uApplication {
+#include <vector>
+#include <cstdint>
+
+struct uApplication {
 
 protected:
 
-	//	Application info
-	string title;
-	string developer;
-	u16 majorVersion;
-	u16 minorVersion;
-
-	vector<uWindow*> windows;
-
+	std::vector<uWindow*> windows;
 	void AddWindow(uWindow* window);
 
 public:
+	//	Application info
+	const char* title;
+	const char* developer;
+	uint16_t majorVersion;
+	uint16_t minorVersion;
 
 	//	Called when self-tests complete and application
 	//	launched ok. In this method you should open windows

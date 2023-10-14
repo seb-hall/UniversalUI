@@ -9,23 +9,21 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
 
-#include "UniversalUI/Misc/Types.h"
-
 struct uPoint {
-    f32 x;
-    f32 y;
+    float x;
+    float y;
 };
 
 struct uSize {
-    f32 width;
-    f32 height;
+    float width;
+    float height;
 };
 
 struct uRect {
-    f32 x;
-    f32 y;
-    f32 width;
-    f32 height;
+    float x;
+    float y;
+    float width;
+    float height;
 };
 
 

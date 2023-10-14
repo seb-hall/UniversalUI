@@ -1,0 +1,6 @@
+# ninja log v5
+7	421	7189359897961409	CMakeFiles/UniversalUI.dir/src/uWindow.cpp.obj	a4ed393eee0107cf
+1	422	7189359897961409	CMakeFiles/UniversalUI.dir/src/UniversalUI.cpp.obj	327fbbbb87df544b
+4	422	7189359897961409	CMakeFiles/UniversalUI.dir/src/uApplication.cpp.obj	4ee5a78fa22f2fd1
+2	486	7189361181049996	CMakeFiles/UniversalUI.dir/test/main.cpp.obj	5b52faaf166fa777
+486	662	7189361182699785	UniversalUI.exe	e45e5353ecc7c0dc

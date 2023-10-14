@@ -9,11 +9,8 @@
 #ifndef UWINDOW_H
 #define UWINDOW_H
 
-#include "UniversalUI/Misc/Types.h"
-#include "UniversalUI/Misc/Geometry.h"
+#include "UniversalUI/Base/Geometry.h"
 #include "UniversalUI/Window/uWindowHandle.h"
-
-#include "wgpu/wgpu.h"
 
 
 class uWindow {
@@ -22,13 +19,10 @@ public:
     uWindowHandle handle;
     uSize size;
 
-    bool forceSmoothResize;
-
     int displayWidth;
     int displayHeight;
 
-
-    uWindow(string title, uSize size);
+    uWindow(const char* title, uSize size);
 
     void PollEvents();
 
@@ -36,24 +30,6 @@ public:
     virtual void Render();
 
 private:
-
-    //  0 - untested, -1 error, 1 success
-    static int POSTResult;
-
-
-    WGPUInstance instance;
-    WGPUAdapter adapter;
-    WGPUDevice device;
-
-    WGPUSurface surface;
-    WGPUSwapChain swapchain;
-
-    static void RequestAdapterCallback(WGPURequestAdapterStatus status,
-        WGPUAdapter adapter, char const* message,
-        void* userdata);
-    static void RequestDeviceCallback(WGPURequestDeviceStatus status,
-        WGPUDevice device, char const* message,
-        void* userdata);
 
 };
 

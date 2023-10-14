@@ -1,6 +1,6 @@
 #include "UniversalUI/UniversalUI.h"
 
-/*
+
 int UniversalUI(uApplication* app) {
 
 
@@ -9,4 +9,4 @@ int UniversalUI(uApplication* app) {
 	app->ApplicationLaunched();
 
 	return app->Run();
-}*/
+}

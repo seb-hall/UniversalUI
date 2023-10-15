@@ -1,3 +1,0 @@
-C:/Users/sebam/Documents/UniversalUI/out/build/x64-Debug/CMakeFiles/UniversalUI.dir
-C:/Users/sebam/Documents/UniversalUI/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/sebam/Documents/UniversalUI/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

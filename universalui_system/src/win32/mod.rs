@@ -3,11 +3,35 @@ use windows::Win32::Foundation::*;
 use windows::Win32::System::LibraryLoader::GetModuleHandleW;
 use windows::Win32::UI::WindowsAndMessaging::*;
 
+use vulkano::library::*;
+use vulkano::instance::InstanceExtensions;
+
 mod events;
 mod window;
 
 pub use events::*;
+
+
 pub use window::*;
+
+pub fn required_vk_extensions(library: &VulkanLibrary) -> InstanceExtensions {
+    let ideal = InstanceExtensions {
+        khr_surface: true,
+        khr_win32_surface: true,
+        khr_get_physical_device_properties2: true,
+        khr_get_surface_capabilities2: true,
+        ..InstanceExtensions::empty()
+    };
+
+    library.supported_extensions().intersection(&ideal)
+}
+
+pub struct WindowHandle {
+    pub instance: HMODULE,
+    pub handle: HWND,
+}
+
+
 
 pub fn init() -> bool {
 

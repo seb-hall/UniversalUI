@@ -3,8 +3,11 @@ use windows::Win32::Foundation::*;
 use windows::Win32::System::LibraryLoader::GetModuleHandleW;
 use windows::Win32::UI::WindowsAndMessaging::*;
 
+
+use super::*;
+
 //  create window and update window handle
-pub fn create_window() {
+pub fn create_window() -> WindowHandle {
     
     fn get_instance() -> Result<HMODULE> {
         unsafe {
@@ -38,8 +41,16 @@ pub fn create_window() {
             instance.unwrap(),
             None,
         );
-
+ 
+        
         ShowWindow(win32_window, SW_SHOW);
+
+        let window = WindowHandle {
+            instance: instance.unwrap(),
+            handle: win32_window,
+        };
+
+        return window;
 
     }
 }

@@ -1,9 +1,10 @@
 
 #[cfg_attr(windows, path = "win32/mod.rs")]
 pub mod native;
+pub use native::*;
 
-mod window;
-pub use window::*;
+mod windowManager;
+pub use windowManager::*;
 
 pub fn init() -> bool {
 

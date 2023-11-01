@@ -1,8 +1,20 @@
 use std::sync::Arc;
 use std::ptr::*;
 use vulkano::VulkanLibrary;
-use vulkano::instance::{Instance, InstanceCreateInfo};
+use vulkano::instance::{Instance, InstanceCreateInfo, InstanceExtensions};
 use vulkano::device::{QueueFlags, Device, DeviceCreateInfo, QueueCreateInfo};
+
+pub fn required_vk_extensions(library: &VulkanLibrary) -> InstanceExtensions {
+    let ideal = InstanceExtensions {
+        khr_surface: true,
+        khr_win32_surface: true,
+        khr_get_physical_device_properties2: true,
+        khr_get_surface_capabilities2: true,
+        ..InstanceExtensions::empty()
+    };
+
+    library.supported_extensions().intersection(&ideal)
+}
 
 
 
@@ -10,9 +22,15 @@ pub fn load_vulkan_library() -> bool {
 
     let library: Arc<VulkanLibrary> = VulkanLibrary::new().expect("no local Vulkan library/DLL");
 
-    let instance: Arc<Instance> = Instance::new(library, InstanceCreateInfo::default())
-        .expect("failed to create instance");
-
+    let required_extensions = required_vk_extensions(&library);
+    let instance = Instance::new(
+        library,
+        InstanceCreateInfo {
+            enabled_extensions: required_extensions,
+            ..Default::default()
+        },
+    )
+    .expect("failed to create instance");
 
     let physical_device = instance
         .enumerate_physical_devices()

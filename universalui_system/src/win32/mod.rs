@@ -3,8 +3,8 @@ use windows::Win32::Foundation::*;
 use windows::Win32::System::LibraryLoader::GetModuleHandleW;
 use windows::Win32::UI::WindowsAndMessaging::*;
 
-use vulkano::library::*;
-use vulkano::instance::InstanceExtensions;
+
+use ash::{vk, Entry};
 
 mod events;
 mod window;
@@ -13,23 +13,6 @@ pub use events::*;
 
 
 pub use window::*;
-
-pub fn required_vk_extensions(library: &VulkanLibrary) -> InstanceExtensions {
-    let ideal = InstanceExtensions {
-        khr_surface: true,
-        khr_win32_surface: true,
-        khr_get_physical_device_properties2: true,
-        khr_get_surface_capabilities2: true,
-        ..InstanceExtensions::empty()
-    };
-
-    library.supported_extensions().intersection(&ideal)
-}
-
-pub struct WindowHandle {
-    pub instance: HMODULE,
-    pub handle: HWND,
-}
 
 
 
@@ -98,17 +81,29 @@ pub fn init() -> bool {
         }
     };
 
+    let entry = Entry::linked();
+    let app_info = vk::ApplicationInfo {
+        api_version: vk::make_api_version(0, 1, 0, 0),
+        e
+        ..Default::default()
+    };
+    let create_info = vk::InstanceCreateInfo {
+        p_application_info: &app_info,
+        ..Default::default()
+    };
+
+    let instance = unsafe { entry.create_instance(&create_info, None) };
+
+
+
     return true;
 }
 
 
 
-
-
 unsafe extern "system" fn wndproc(window: HWND, message: u32, wparam: WPARAM, lparam: LPARAM) -> LRESULT { 
 
-    //println!("an event occured! {}", message);
-    
+    //crate::windowManager::awindowdidsomething(self);
     unsafe {
         
         unsafe fn loword(x: u32) -> u16 {

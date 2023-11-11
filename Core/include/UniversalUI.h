@@ -7,6 +7,7 @@
 
 #include "uApplication.h"
 #include "uWindowManager.h"
+#include "uRenderManager.h"
 
 //  UniversalUI main function - takes a subclass
 //  of uApplication and only returns on application quit.

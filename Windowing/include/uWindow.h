@@ -37,6 +37,7 @@ enum uWindowVisibility {
 class uWindow {
 
     friend class uWindowManager;
+    friend class uRenderManager;
 
     uWindowHandle systemHandle = nullptr;
 

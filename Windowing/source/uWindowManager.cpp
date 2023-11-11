@@ -4,6 +4,8 @@
 
 #include "../include/uWindowManager.h"
 
+#include "uRenderManager.h"
+
 std::vector<uWindow*> uWindowManager::windows;
 
 #include <cstdio>
@@ -80,6 +82,8 @@ void uWindowManager::CreateNewWindow(uWindow* window, double width, double heigh
             printf("ERROR: Window creation failed!");
             return;
         }
+
+        uRenderManager::CreateVulkanSurfaceForWindow(window);
 
         windows.push_back(window);
     #endif // _WIN32

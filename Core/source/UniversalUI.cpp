@@ -13,6 +13,11 @@ int UniversalUI(uApplication* application) {
     if (!uWindowManager::Init()) {
         return -1;
     }
+
+    if (!uRenderManager::Init()) {
+        return -1;
+    }
+
     application->FinishedLaunching();
 
     while (!application->shouldQuit) {

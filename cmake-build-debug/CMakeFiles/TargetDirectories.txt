@@ -1,0 +1,3 @@
+C:/Users/sebam/CLionProjects/UniversalUI/cmake-build-debug/CMakeFiles/UniversalUI.dir
+C:/Users/sebam/CLionProjects/UniversalUI/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sebam/CLionProjects/UniversalUI/cmake-build-debug/CMakeFiles/rebuild_cache.dir

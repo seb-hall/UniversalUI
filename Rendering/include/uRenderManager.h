@@ -10,6 +10,17 @@
 #include <vector>
 #include <map>
 
+struct QueueFamilyIndices {
+    uint32_t graphicsFamily;
+    uint32_t presentFamily;
+}
+
+struct SwapChainSupportDetails {
+    VkSurfaceCapabilitiesKHR capabilities;
+    std::vector<VkSurfaceFormatKHR> formats;
+    std::vector<VkPresentModeKHR> presentModes;
+};
+
 struct uRenderStuff {
     VkSurfaceKHR surface; // Your Vulkan surface
    // VkDevice device; // Your Vulkan device
@@ -40,6 +51,16 @@ public:
     static void SetupForWindow(uWindow* window);
 
     static void RenderToWindow(uWindow* window);
+
+    static void CreateVulkanInstance();
+
+    static void PickPhysicalDevice();
+
+    static bool IsDeviceSuitable(VkPhysicalDevice device);
+
+    static void CreateLogicalDevice(uWindow* window);
+
+    static QueueFamilyIndices FindQueueFamilies(VkPhysicalDevice device, uWindow* window);
 
 };
 

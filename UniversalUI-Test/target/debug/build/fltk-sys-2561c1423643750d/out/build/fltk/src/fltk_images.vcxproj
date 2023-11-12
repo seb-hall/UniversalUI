@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7B2B438E-C7C8-3549-A327-63C0100F0E69}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>fltk_images</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fltk_images.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fltk_imagesd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">fltk_images.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">fltk_images</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">fltk_images.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">fltk_images</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">fltk_images.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">fltk_images</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Brepro /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4099;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Brepro -Brepro /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4099;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Brepro /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4099;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Brepro /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4099;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;FL_LIBRARY;WIN32_LEAN_AND_MEAN;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\zlib;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\jpeg;C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\png;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk -BC:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build --check-stamp-file C:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build/fltk/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk -BC:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build --check-stamp-file C:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build/fltk/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk -BC:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build --check-stamp-file C:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build/fltk/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk -BC:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build --check-stamp-file C:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build/fltk/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\fl_images_core.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\fl_write_png.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_BMP_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_File_Icon2.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_GIF_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_Anim_GIF_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_Help_Dialog.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_ICO_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_JPEG_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_PNG_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_PNM_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_Image_Reader.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\Fl_SVG_Image.cxx" />
+    <ClCompile Include="C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\fltk\src\drivers\SVG\Fl_SVG_File_Surface.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\ZERO_CHECK.vcxproj">
+      <Project>{0A296A5F-0F6D-34AF-BA54-C50FD1706571}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\src\fltk.vcxproj">
+      <Project>{74A3E94E-2D0C-31BC-A91B-8864BBF86C1B}</Project>
+      <Name>fltk</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\jpeg\fltk_jpeg.vcxproj">
+      <Project>{AB2067B2-6770-3919-802A-550BC70B09DF}</Project>
+      <Name>fltk_jpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\png\fltk_png.vcxproj">
+      <Project>{D4AB630A-63FC-3600-893E-E78EA95320A9}</Project>
+      <Name>fltk_png</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\sebam\RustroverProjects\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-2561c1423643750d\out\build\fltk\zlib\fltk_z.vcxproj">
+      <Project>{233E8E5C-1FA4-3F69-B6F1-E1A61A3C91F6}</Project>
+      <Name>fltk_z</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

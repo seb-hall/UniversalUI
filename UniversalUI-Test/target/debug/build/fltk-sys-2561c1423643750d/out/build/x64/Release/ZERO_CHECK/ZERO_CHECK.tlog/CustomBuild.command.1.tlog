@@ -1,0 +1,10 @@
+^C:\USERS\SEBAM\RUSTROVERPROJECTS\UNIVERSALUI\UNIVERSALUI-TEST\TARGET\DEBUG\BUILD\FLTK-SYS-2561C1423643750D\OUT\BUILD\CMAKEFILES\E8C09730A928659F68BD2EBE50AB3FE6\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk -BC:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sebam/RustroverProjects/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-2561c1423643750d/out/build/cfltk.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

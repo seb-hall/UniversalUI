@@ -83,7 +83,8 @@ void uWindowManager::CreateNewWindow(uWindow* window, double width, double heigh
             return;
         }
 
-        uRenderManager::CreateVulkanSurfaceForWindow(window);
+        uRenderManager::SetupForWindow(window);
+        uRenderManager::RenderToWindow(window);
 
         windows.push_back(window);
     #endif // _WIN32

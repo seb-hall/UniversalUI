@@ -4,25 +4,33 @@ use fltk::{
     app, button::Button, frame::Frame, window::Window,
     image::IcoImage,
     enums::Event,
+    app::MouseWheel
 };
 use glow::*;
 extern crate glow;
+
+extern crate nalgebra as na;
+
+use na::{Matrix4, Perspective3, Point3, Translation3};
+
 
 use glow::HasContext;
 use std::mem;
 use rfd::FileDialog;
 use std::path::{Path, PathBuf};
 use std::vec::Vec;
-use std::{cell::RefCell, rc::Rc};
+use std::{cell::RefCell, rc::Rc, sync::Mutex, sync::Arc};
 use std::borrow::BorrowMut;
 
 const VERTEX_SHADER_SOURCE: &str = r#"#version 330
   in vec3 in_position;
   out vec2 position;
   uniform vec2 viewOffset;
+  uniform mat4 projection;
+  uniform mat4 translation;
   void main() {
     position = in_position.xy;
-    gl_Position = vec4(in_position.xy + viewOffset, in_position.z, 1.0);
+    gl_Position = projection*translation*vec4(in_position.xy + viewOffset, in_position.z, 1.0);
   }"#;
 const FRAGMENT_SHADER_SOURCE: &str = r#"#version 330
   precision mediump float;
@@ -33,6 +41,31 @@ const FRAGMENT_SHADER_SOURCE: &str = r#"#version 330
     color = vec4(position, blue, 1.0);
   }"#;
 
+fn CreateTranslationMatrix(translation: na::Vector3<f32>) -> Matrix4<f32> {
+    // Create a translation matrix
+    let translation_matrix = Translation3::from(translation).to_homogeneous();
+
+    translation_matrix
+}
+
+
+fn CreateProjectionMatrix(fov_degrees: f32) -> Matrix4<f32> {
+    // Define the perspective parameters
+    let aspect_ratio: f32 = 800.0 / 600.0; // Width / Height
+    let near_plane: f32 = 0.1;
+    let far_plane: f32 = 100.0;
+
+    // Create a perspective projection matrix
+    let projection_matrix = Perspective3::new(
+        aspect_ratio,
+        fov_degrees.to_radians(),
+        near_plane,
+        far_plane,
+    )
+    .to_homogeneous();
+
+    projection_matrix
+}
 
 // new functions 
 fn GetContext(win: &window::GlWindow) -> glow::Context {
@@ -173,7 +206,14 @@ fn main() {
         let program = create_program(&gl, VERTEX_SHADER_SOURCE, FRAGMENT_SHADER_SOURCE);
         gl.use_program(Some(program));
         gl.clear_color(0.2, 0.2, 0.2, 1.0);
+
+        
         // Upload some uniforms
+
+        let uniform_location_projection = gl.get_uniform_location(program, "translation");
+                // See also `uniform_n_i32`, `uniform_n_u32`, `uniform_matrix_4_f32_slice` etc.
+        gl.uniform_matrix_4_f32_slice(uniform_location_projection.as_ref(), false, CreateTranslationMatrix(na::Vector3::new(0.0, -2.5, -5.0)).as_slice());
+                
         
 
         let mut vertsVec: Vec<f32> = Vec::new();
@@ -284,29 +324,38 @@ fn main() {
 
         let buffers = vec![(vbo, vao, vl)];
         
-        let last_x: Rc<RefCell<f32>> = Rc::new(RefCell::new(0.0));
-        let last_y: Rc<RefCell<f32>> = Rc::new(RefCell::new(0.0));
+        let last_x: Mutex<f32> = Mutex::new(0.0);
+        let last_y: Mutex<f32> = Mutex::new(0.0);
+        let shared_x = Arc::new(last_x);
+        let shared_y = Arc::new(last_y);
+        let shared_win_x = shared_x.clone();
+        let shared_win_y = shared_y.clone();
 
+        let fov: Mutex<f32> = Mutex::new(90.0);
+        let shared_fov = Arc::new(fov);
+        let shared_win_fov = shared_fov.clone();
             
         win.draw(move |w| {
             //println!("DRAW");
             unsafe {
-
                         // Get mutable references to last_x and last_y
-            let mut last_x = last_x.borrow();
-            let mut last_y = last_y.borrow();
 
                 let uniform_location = gl.get_uniform_location(program, "viewOffset");
                 // See also `uniform_n_i32`, `uniform_n_u32`, `uniform_matrix_4_f32_slice` etc.
-                gl.uniform_2_f32(uniform_location.as_ref(), last_x.clone(), last_y.clone());
-                println!("UNIFORM: x={}, y={}", last_x, last_y);
+                gl.uniform_2_f32(uniform_location.as_ref(), *(shared_x.clone().lock().unwrap()) / 1000.0, *(shared_y.clone().lock().unwrap()) / 1000.0);
+                println!("UNIFORM: x={}, y={}", *(shared_x.lock().unwrap()), *(shared_y.lock().unwrap()));
+
+                let uniform_location_projection = gl.get_uniform_location(program, "projection");
+                // See also `uniform_n_i32`, `uniform_n_u32`, `uniform_matrix_4_f32_slice` etc.
+                gl.uniform_matrix_4_f32_slice(uniform_location_projection.as_ref(), false, CreateProjectionMatrix(*(shared_fov.lock().unwrap())).as_slice());
+                
 
                 gl.clear(glow::COLOR_BUFFER_BIT);
                 for i in &buffers {
                     gl.bind_vertex_array(Some(i.1));
                     gl.draw_arrays(glow::LINES, 0, i.2);
                 }
-
+                
                 
             }
 
@@ -328,30 +377,50 @@ fn main() {
                 Event::Drag => {
                     let current_x = app::event_x();
                     let current_y = app::event_y();
-    
+                    
+
+                    let mut lastx = *(shared_win_x.lock().unwrap());
+                    let mut lasty = *(shared_win_y.lock().unwrap());
                     
     
                     
 
-                                    // Get mutable references to last_x and last_y
-                    let mut lastx = last_x.borrow_mut();
-                    let mut lasty = last_y.borrow_mut();
+                    
 
                     // Calculate the distance dragged
-                    let dx = current_x - (lastx.borrow().clone()) as i32;
-                    let dy = current_y - (lasty.borrow().clone()) as i32;
+                    let dx = current_x as f32- lastx;
+                    let dy = current_y as f32- lasty;
 
                     // Do something with the drag distance or mouse position
                     println!("Mouse Dragged: dx={}, dy={}", dx, dy);
 
-                    // Now you can update last_x and last_y within this closure
-                    *lastx = Rc::new(RefCell::new(0.0)); // Replace new_x_value with the actual value you want
-                    *lasty = Rc::new(RefCell::new(0.0)); // Replace new_y_value with the actual value you want
-
-
+                    *(shared_win_x.lock().unwrap()) += dx;
+                    *(shared_win_y.lock().unwrap()) += dy;
                     
                     true
                 }
+                Event::MouseWheel => {
+                    let current_y = app::event_y();
+                    println!("Mouse Scrplled {}", current_y);
+
+                    let dy: f32 = current_y as f32 / 250.0;
+
+                    if (app::event_dy() == MouseWheel::Up) {
+                        *(shared_win_fov.lock().unwrap()) += dy;
+                    } else if (app::event_dy() == MouseWheel::Down) {
+                        *(shared_win_fov.lock().unwrap()) -= dy;
+                    }
+                    
+
+                    true
+                }
+                Event::Move => {
+                    let current_y = app::event_y();
+                    println!("Mouse Moved {}", current_y);
+                    
+                    true
+                }
+                
                 _ => false,
             }
         });
@@ -367,7 +436,6 @@ fn main() {
             }
             
             win.flush();
-            println!("flush");
         }
     
         

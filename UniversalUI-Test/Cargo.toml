@@ -9,5 +9,6 @@ edition = "2021"
 fltk = { version = "^1.4", features = ["enable-glwindow"] }
 fltk-theme = "^0.7"
 glow = "0.13.0"
+nalgebra = "0.32.3"
 rfd = "0.12.1"
 tobj = "4.0.0"

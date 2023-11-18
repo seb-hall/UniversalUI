@@ -1,0 +1,23 @@
+error: patch failed: src/Fl_win32.cxx:610
+error: src/Fl_win32.cxx: patch does not apply
+
+
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_ASM_FLAGS
+
+
+C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\src\cfl_prefs.cpp: In function 'Fl_Preferences* Fl_Preferences_from_path(const char*, const char*, const char*)':
+C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\src\cfl_prefs.cpp:23:56: warning: 'Fl_Preferences::Fl_Preferences(const char*, const char*, const char*)' is deprecated: in 1.4.0 - use Fl_Preferences(path, vendor, application, flags) instead [-Wdeprecated-declarations]
+   23 |     return new Fl_Preferences(path, vendor, application);
+      |                                                        ^
+In file included from C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/FL/Fl_Preferences.H:25,
+                 from C:\Users\sebam\.cargo\registry\src\index.crates.io-6f17d22bba15001f\fltk-sys-1.4.16\cfltk\src\cfl_prefs.cpp:3:
+C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/FL/Fl_Preferences.H:206:17: note: declared here
+  206 |                 Fl_Preferences( const char *path, const char *vendor, const char *application ) );
+      |                 ^~~~~~~~~~~~~~
+C:/Users/sebam/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.16/cfltk/fltk/FL/fl_attr.h:123:54: note: in definition of macro 'FL_DEPRECATED'
+  123 | #define FL_DEPRECATED(msg, func) [[deprecated(msg)]] func
+      |                                                      ^~~~
+fatal: not a git repository (or any of the parent directories): .git

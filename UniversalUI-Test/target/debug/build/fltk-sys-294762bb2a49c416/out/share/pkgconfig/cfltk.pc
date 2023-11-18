@@ -1,0 +1,15 @@
+prefix="C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out"
+exec_prefix="${prefix}"
+libdir="${prefix}/lib"
+includedir="${prefix}/include"
+
+Name: cfltk
+Description: C Bindings for FLTK
+URL: https://github.com/MoAlyousef/cfltk
+Version: 1.4.16
+
+Requires:
+Requires.private: 
+Cflags: -I"${includedir}" 
+Libs: -L"${libdir}" -lcfltk
+Libs.private: -L"${libdir}" -lcfltk -lfltk -lfltk_images -lfltk_z -lfltk_jpeg -lfltk_png -lgdiplus -lws2_32 -lcomctl32 -lgdi32 -loleaut32 -lole32 -luuid -lshell32 -ladvapi32 -lcomdlg32 -lwinspool -luser32 -lkernel32 -lodbc32 -lgcc -lsupc++ -pthread

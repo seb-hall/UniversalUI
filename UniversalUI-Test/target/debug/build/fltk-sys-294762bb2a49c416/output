@@ -1,0 +1,718 @@
+cargo:rerun-if-changed=build/android.rs
+cargo:rerun-if-changed=build/bundled.rs
+cargo:rerun-if-changed=build/link.rs
+cargo:rerun-if-changed=build/main.rs
+cargo:rerun-if-changed=build/source.rs
+cargo:rerun-if-changed=build/utils.rs
+cargo:rerun-if-changed=build/fltk_config.rs
+cargo:rerun-if-changed=build/pkg_config.rs
+cargo:rerun-if-env-changed=CC
+cargo:rerun-if-env-changed=CXX
+cargo:rerun-if-env-changed=CFLTK_TOOLCHAIN
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=CFLTK_WAYLAND_ONLY
+cargo:rerun-if-env-changed=CFLTK_GENERATE_BUNDLE_DIR
+cargo:rerun-if-changed=cfltk/CMakeLists.txt
+cargo:rerun-if-changed=cfltk/include/cfl.h
+cargo:rerun-if-changed=cfltk/include/cfl_widget.h
+cargo:rerun-if-changed=cfltk/include/cfl_group.h
+cargo:rerun-if-changed=cfltk/include/cfl_input.h
+cargo:rerun-if-changed=cfltk/include/cfl_window.h
+cargo:rerun-if-changed=cfltk/include/cfl_button.h
+cargo:rerun-if-changed=cfltk/include/cfl_box.h
+cargo:rerun-if-changed=cfltk/include/cfl_menu.h
+cargo:rerun-if-changed=cfltk/include/cfl_dialog.h
+cargo:rerun-if-changed=cfltk/include/cfl_valuator.h
+cargo:rerun-if-changed=cfltk/include/cfl_browser.h
+cargo:rerun-if-changed=cfltk/include/cfl_misc.h
+cargo:rerun-if-changed=cfltk/include/cfl_text.h
+cargo:rerun-if-changed=cfltk/include/cfl_image.h
+cargo:rerun-if-changed=cfltk/include/cfl_draw.h
+cargo:rerun-if-changed=cfltk/include/cfl_table.h
+cargo:rerun-if-changed=cfltk/include/cfl_surface.h
+cargo:rerun-if-changed=cfltk/include/cfl_printer.h
+cargo:rerun-if-changed=cfltk/include/cfl_utils.h
+cargo:rerun-if-changed=cfltk/include/cfl_macros.h
+cargo:rerun-if-changed=cfltk/include/cfl_lock.h
+cargo:rerun-if-changed=cfltk/include/cfl_prefs.h
+cargo:rerun-if-changed=cfltk/include/cfl_widget.hpp
+cargo:rerun-if-changed=cfltk/src/cfl_lock.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_new.cpp
+cargo:rerun-if-changed=cfltk/src/cfl.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_widget.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_group.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_window.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_button.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_box.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_menu.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_dialog.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_valuator.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_browser.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_misc.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_text.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_image.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_input.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_draw.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_table.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_tree.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_surface.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_printer.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_font.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_utils.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_prefs.cpp
+cargo:rerun-if-changed=cfltk/src/cfl_nswindow.m
+cargo:rerun-if-changed=cfltk/fltk.patch
+CMAKE_TOOLCHAIN_FILE_x86_64-pc-windows-gnu = None
+CMAKE_TOOLCHAIN_FILE_x86_64_pc_windows_gnu = None
+HOST_CMAKE_TOOLCHAIN_FILE = None
+CMAKE_TOOLCHAIN_FILE = None
+CMAKE_GENERATOR_x86_64-pc-windows-gnu = None
+CMAKE_GENERATOR_x86_64_pc_windows_gnu = None
+HOST_CMAKE_GENERATOR = None
+CMAKE_GENERATOR = None
+running: "gcc.exe" "--version"
+exit code: 0
+cargo-warning:Compiler version doesn't include clang or GCC: "gcc.exe" "--version"
+running: "g++.exe" "--version"
+exit code: 0
+cargo-warning:Compiler version doesn't include clang or GCC: "g++.exe" "--version"
+running: "gcc.exe" "--version"
+exit code: 0
+cargo-warning:Compiler version doesn't include clang or GCC: "gcc.exe" "--version"
+CMAKE_PREFIX_PATH_x86_64-pc-windows-gnu = None
+CMAKE_PREFIX_PATH_x86_64_pc_windows_gnu = None
+HOST_CMAKE_PREFIX_PATH = None
+CMAKE_PREFIX_PATH = None
+CMAKE_x86_64-pc-windows-gnu = None
+CMAKE_x86_64_pc_windows_gnu = None
+HOST_CMAKE = None
+CMAKE = None
+running: "cmake" "C:\\Users\\sebam\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\fltk-sys-1.4.16\\cfltk" "-G" "MinGW Makefiles" "-DOPTION_USE_SYSTEM_LIBPNG=OFF" "-DOPTION_USE_SYSTEM_LIBJPEG=OFF" "-DOPTION_USE_SYSTEM_ZLIB=OFF" "-DCFLTK_LINK_IMAGES=ON" "-DOpenGL_GL_PREFERENCE=GLVND" "-DOPTION_USE_GL=OFF" "-DCFLTK_USE_OPENGL=OFF" "-DCFLTK_SINGLE_THREADED=OFF" "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" "-DCFLTK_CARGO_BUILD=ON" "-DFLTK_BUILD_EXAMPLES=OFF" "-DFLTK_BUILD_TEST=OFF" "-DFLTK_BUILD_FLUID=OFF" "-DFLTK_BUILD_FLTK_OPTIONS=OFF" "-DOPTION_LARGE_FILE=ON" "-DOPTION_USE_THREADS=ON" "-DOPTION_BUILD_HTML_DOCUMENTATION=OFF" "-DOPTION_BUILD_PDF_DOCUMENTATION=OFF" "-DCMAKE_INSTALL_PREFIX=C:\\Users\\sebam\\Documents\\UniversalUI\\UniversalUI-Test\\target\\debug\\build\\fltk-sys-294762bb2a49c416\\out" "-DCMAKE_C_FLAGS= -ffunction-sections -fdata-sections -m64" "-DCMAKE_CXX_FLAGS= -ffunction-sections -fdata-sections -m64" "-DCMAKE_ASM_FLAGS= -ffunction-sections -fdata-sections -m64" "-DCMAKE_BUILD_TYPE=Release"
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/mingw64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Found PkgConfig: C:/msys64/mingw64/bin/pkg-config.exe (found version "1.8.0") 
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Configuration Summary for FLTK 1.4.0 generated by CMake 3.25.0-rc3 --
+
+-- The following OPTIONAL packages have not been found:
+
+ * Doxygen
+
+-- Static libraries will be built in C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/build/fltk/lib
+-- Shared libraries will not be built (set OPTION_BUILD_SHARED_LIBS=ON to build)
+-- FLUID            will not be built (set FLTK_BUILD_FLUID=ON to build)
+-- fltk-options     will not be built (set FLTK_BUILD_FLTK_OPTIONS=ON to build)
+-- Example programs will not be built (set FLTK_BUILD_EXAMPLES=ON to build)
+-- Image Libraries         : JPEG = Builtin
+--                         : PNG  = Builtin
+--                         : ZLIB = Builtin
+-- Fl_Cairo_Window support : No
+-- Use std::               : No
+-- End of Configuration Summary --
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/build
+running: "cmake" "--build" "." "--target" "install" "--config" "Release" "--parallel" "20"
+[  0%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_new.cpp.obj
+[  0%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_lock.cpp.obj
+[  0%] Building CXX object CMakeFiles/cfltk.dir/src/cfl.cpp.obj
+[  1%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/adler32.c.obj
+[  1%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/compress.c.obj
+[  2%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_window.cpp.obj
+[  2%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_button.cpp.obj
+[  2%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/crc32.c.obj
+[  3%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/deflate.c.obj
+[  3%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_widget.cpp.obj
+[  3%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/gzclose.c.obj
+[  3%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jmemnobs.c.obj
+[  4%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/gzlib.c.obj
+[  4%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_group.cpp.obj
+[  5%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jaricom.c.obj
+[  5%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcomapi.c.obj
+[  5%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jutils.c.obj
+[  6%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jerror.c.obj
+[  6%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jmemmgr.c.obj
+[  7%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl.cxx.obj
+[  7%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Adjuster.cxx.obj
+[  7%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_text.cpp.obj
+[  7%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Bitmap.cxx.obj
+[  7%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_box.cpp.obj
+[  7%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcapimin.c.obj
+[  8%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Browser.cxx.obj
+[  9%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_input.cpp.obj
+[  9%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_menu.cpp.obj
+[ 10%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcapistd.c.obj
+[ 10%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_dialog.cpp.obj
+[ 10%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Browser_.cxx.obj
+[ 12%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/gzread.c.obj
+[ 12%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_valuator.cpp.obj
+[ 12%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_browser.cpp.obj
+[ 12%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcarith.c.obj
+[ 12%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_misc.cpp.obj
+[ 12%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jctrans.c.obj
+[ 12%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/gzwrite.c.obj
+[ 12%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Browser_load.cxx.obj
+[ 12%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/inflate.c.obj
+[ 13%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_image.cpp.obj
+[ 13%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcparam.c.obj
+[ 14%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Box.cxx.obj
+[ 14%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_draw.cpp.obj
+[ 15%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/infback.c.obj
+[ 16%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdatadst.c.obj
+[ 16%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/inftrees.c.obj
+[ 16%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_table.cpp.obj
+[ 16%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Button.cxx.obj
+[ 16%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/inffast.c.obj
+[ 16%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_tree.cpp.obj
+[ 16%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcinit.c.obj
+[ 17%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_surface.cpp.obj
+[ 18%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/trees.c.obj
+[ 18%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Chart.cxx.obj
+[ 18%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_font.cpp.obj
+[ 18%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcmaster.c.obj
+[ 18%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/uncompr.c.obj
+[ 18%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_utils.cpp.obj
+[ 19%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Check_Browser.cxx.obj
+[ 20%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcmarker.c.obj
+[ 20%] Building C object fltk/zlib/CMakeFiles/fltk_z.dir/zutil.c.obj
+[ 21%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_prefs.cpp.obj
+[ 21%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Check_Button.cxx.obj
+[ 21%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcmainct.c.obj
+[ 22%] Linking C static library ..\lib\libfltk_z.a
+[ 22%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Choice.cxx.obj
+[ 22%] Building CXX object CMakeFiles/cfltk.dir/src/cfl_printer.cpp.obj
+[ 22%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Clock.cxx.obj
+[ 22%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcprepct.c.obj
+[ 23%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Color_Chooser.cxx.obj
+[ 24%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jccoefct.c.obj
+[ 24%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Copy_Surface.cxx.obj
+[ 24%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jccolor.c.obj
+[ 24%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Counter.cxx.obj
+[ 25%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Device.cxx.obj
+[ 25%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcsample.c.obj
+[ 25%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Dial.cxx.obj
+[ 25%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Double_Window.cxx.obj
+[ 26%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jchuff.c.obj
+[ 26%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jcdctmgr.c.obj
+[ 27%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_File_Browser.cxx.obj
+[ 27%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_File_Chooser.cxx.obj
+[ 27%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jfdctfst.c.obj
+[ 28%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jfdctflt.c.obj
+[ 28%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_File_Chooser2.cxx.obj
+[ 28%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jfdctint.c.obj
+[ 29%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_File_Icon.cxx.obj
+[ 29%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdapimin.c.obj
+[ 29%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_File_Input.cxx.obj
+[ 29%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Flex.cxx.obj
+[ 30%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdapistd.c.obj
+[ 30%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdarith.c.obj
+[ 30%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdtrans.c.obj
+[ 31%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Graphics_Driver.cxx.obj
+[ 31%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Grid.cxx.obj
+[ 31%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Group.cxx.obj
+[ 31%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdatasrc.c.obj
+[ 32%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdmaster.c.obj
+[ 33%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Help_View.cxx.obj
+[ 33%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Image.cxx.obj
+[ 33%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdinput.c.obj
+[ 33%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Image_Surface.cxx.obj
+[ 33%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdmarker.c.obj
+[ 33%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Input.cxx.obj
+[ 34%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Input_.cxx.obj
+[ 35%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdhuff.c.obj
+[ 35%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Input_Choice.cxx.obj
+[ 35%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Int_Vector.cxx.obj
+[ 36%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Light_Button.cxx.obj
+[ 36%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdmainct.c.obj
+[ 36%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu.cxx.obj
+[ 36%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdcoefct.c.obj
+[ 37%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdpostct.c.obj
+[ 37%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_.cxx.obj
+[ 37%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jddctmgr.c.obj
+[ 38%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_Bar.cxx.obj
+[ 38%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jidctfst.c.obj
+[ 38%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_Button.cxx.obj
+[ 38%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_Window.cxx.obj
+[ 39%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jidctflt.c.obj
+[ 40%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_add.cxx.obj
+[ 40%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jidctint.c.obj
+[ 40%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Menu_global.cxx.obj
+[ 40%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Message.cxx.obj
+[ 40%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdsample.c.obj
+[ 41%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Multi_Label.cxx.obj
+[ 42%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdcolor.c.obj
+[ 42%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Native_File_Chooser.cxx.obj
+[ 42%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jquant1.c.obj
+[ 42%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Overlay_Window.cxx.obj
+[ 42%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jquant2.c.obj
+[ 43%] Building C object fltk/jpeg/CMakeFiles/fltk_jpeg.dir/jdmerge.c.obj
+[ 44%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Pack.cxx.obj
+[ 44%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Pixmap.cxx.obj
+[ 44%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Paged_Device.cxx.obj
+[ 44%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Positioner.cxx.obj
+[ 45%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Preferences.cxx.obj
+[ 45%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Printer.cxx.obj
+[ 45%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Progress.cxx.obj
+[ 46%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Repeat_Button.cxx.obj
+[ 46%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Return_Button.cxx.obj
+[ 46%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Roller.cxx.obj
+[ 47%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Round_Button.cxx.obj
+[ 47%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Scheme.cxx.obj
+[ 48%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Screen_Driver.cxx.obj
+[ 48%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Scheme_Choice.cxx.obj
+[ 48%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Scrollbar.cxx.obj
+[ 48%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Scroll.cxx.obj
+[ 48%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Shortcut_Button.cxx.obj
+[ 49%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Simple_Terminal.cxx.obj
+[ 49%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Shared_Image.cxx.obj
+[ 50%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Single_Window.cxx.obj
+[ 50%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Slider.cxx.obj
+[ 50%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Spinner.cxx.obj
+[ 50%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_String.cxx.obj
+[ 51%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Sys_Menu_Bar.cxx.obj
+[ 51%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_System_Driver.cxx.obj
+[ 51%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Table.cxx.obj
+[ 52%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Table_Row.cxx.obj
+[ 52%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tabs.cxx.obj
+[ 52%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Text_Buffer.cxx.obj
+[ 52%] Built target fltk_z
+[ 53%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Text_Display.cxx.obj
+[ 53%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tile.cxx.obj
+[ 53%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Text_Editor.cxx.obj
+[ 54%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tiled_Image.cxx.obj
+[ 53%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Timeout.cxx.obj
+[ 54%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tooltip.cxx.obj
+[ 54%] Building C object fltk/png/CMakeFiles/fltk_png.dir/png.c.obj
+[ 55%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tree.cxx.obj
+[ 55%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngerror.c.obj
+[ 55%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tree_Item_Array.cxx.obj
+[ 56%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngget.c.obj
+[ 57%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tree_Prefs.cxx.obj
+[ 57%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Tree_Item.cxx.obj
+[ 57%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngmem.c.obj
+[ 57%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Valuator.cxx.obj
+[ 57%] Linking C static library ..\lib\libfltk_jpeg.a
+[ 57%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngpread.c.obj
+[ 57%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Value_Input.cxx.obj
+[ 57%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Value_Output.cxx.obj
+[ 58%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngread.c.obj
+[ 59%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Value_Slider.cxx.obj
+[ 59%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngrio.c.obj
+[ 59%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Widget_Surface.cxx.obj
+[ 59%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Widget.cxx.obj
+[ 59%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngrtran.c.obj
+[ 60%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngrutil.c.obj
+[ 60%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngset.c.obj
+[ 60%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngtrans.c.obj
+[ 61%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngwio.c.obj
+[ 62%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Window.cxx.obj
+[ 62%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngwrite.c.obj
+[ 62%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngwtran.c.obj
+[ 62%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Window_Driver.cxx.obj
+[ 62%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Window_fullscreen.cxx.obj
+[ 63%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Window_hotspot.cxx.obj
+[ 64%] Building C object fltk/png/CMakeFiles/fltk_png.dir/pngwutil.c.obj
+[ 64%] Building C object fltk/png/CMakeFiles/fltk_png.dir/arm/arm_init.c.obj
+[ 64%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Window_iconize.cxx.obj
+[ 64%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Wizard.cxx.obj
+[ 64%] Building C object fltk/png/CMakeFiles/fltk_png.dir/arm/filter_neon_intrinsics.c.obj
+[ 65%] Building C object fltk/png/CMakeFiles/fltk_png.dir/arm/palette_neon_intrinsics.c.obj
+[ 65%] Building C object fltk/png/CMakeFiles/fltk_png.dir/powerpc/powerpc_init.c.obj
+[ 66%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_XBM_Image.cxx.obj
+[ 66%] Building C object fltk/png/CMakeFiles/fltk_png.dir/powerpc/filter_vsx_intrinsics.c.obj
+[ 66%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_XPM_Image.cxx.obj
+[ 66%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_abort.cxx.obj
+[ 67%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_add_idle.cxx.obj
+[ 67%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_arg.cxx.obj
+[ 67%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_compose.cxx.obj
+[ 68%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_display.cxx.obj
+[ 68%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_get_system_colors.cxx.obj
+[ 68%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_grab.cxx.obj
+[ 68%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_lock.cxx.obj
+[ 69%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_own_colormap.cxx.obj
+[ 69%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_visual.cxx.obj
+[ 69%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_absolute.cxx.obj
+[ 70%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_expand.cxx.obj
+[ 70%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_ext.cxx.obj
+[ 70%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_isdir.cxx.obj
+[ 71%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_list.cxx.obj
+[ 71%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_match.cxx.obj
+[ 71%] Building CXX object fltk/src/CMakeFiles/fltk.dir/filename_setext.cxx.obj
+[ 72%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_arc.cxx.obj
+[ 72%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_ask.cxx.obj
+[ 72%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_boxtype.cxx.obj
+[ 73%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_color.cxx.obj
+[ 73%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_contrast.cxx.obj
+[ 73%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_cursor.cxx.obj
+[ 74%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_curve.cxx.obj
+[ 74%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_diamond_box.cxx.obj
+[ 74%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_draw.cxx.obj
+[ 74%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_draw_arrow.cxx.obj
+[ 74%] Linking CXX static library libcfltk.a
+[ 75%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_draw_pixmap.cxx.obj
+[ 75%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_encoding_latin1.cxx.obj
+[ 75%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_encoding_mac_roman.cxx.obj
+[ 75%] Linking C static library ..\lib\libfltk_png.a
+[ 76%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_engraved_label.cxx.obj
+[ 76%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_file_dir.cxx.obj
+[ 76%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_font.cxx.obj
+[ 77%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_gleam.cxx.obj
+[ 77%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_gtk.cxx.obj
+[ 77%] Built target fltk_png
+[ 77%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_labeltype.cxx.obj
+[ 78%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_open_uri.cxx.obj
+[ 78%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_oval_box.cxx.obj
+[ 78%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_overlay.cxx.obj
+[ 79%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_oxy.cxx.obj
+[ 79%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_plastic.cxx.obj
+[ 79%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_read_image.cxx.obj
+[ 79%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_rect.cxx.obj
+[ 80%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_round_box.cxx.obj
+[ 80%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_rounded_box.cxx.obj
+[ 80%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_set_font.cxx.obj
+[ 81%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_scroll_area.cxx.obj
+[ 81%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_shadow_box.cxx.obj
+[ 81%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_shortcut.cxx.obj
+[ 82%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_show_colormap.cxx.obj
+[ 82%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_string_functions.cxx.obj
+[ 82%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_symbols.cxx.obj
+[ 83%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_utf8.cxx.obj
+[ 83%] Building CXX object fltk/src/CMakeFiles/fltk.dir/print_button.cxx.obj
+[ 83%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_vertex.cxx.obj
+[ 84%] Building CXX object fltk/src/CMakeFiles/fltk.dir/screen_xywh.cxx.obj
+[ 84%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/WinAPI/Fl_WinAPI_System_Driver.cxx.obj
+[ 84%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/WinAPI/Fl_WinAPI_Screen_Driver.cxx.obj
+[ 85%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/WinAPI/Fl_WinAPI_Window_Driver.cxx.obj
+[ 85%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/WinAPI/Fl_WinAPI_Printer_Driver.cxx.obj
+[ 86%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_color.cxx.obj
+[ 86%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_arci.cxx.obj
+[ 85%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver.cxx.obj
+[ 86%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_font.cxx.obj
+[ 86%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_image.cxx.obj
+[ 87%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_line_style.cxx.obj
+[ 87%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_rect.cxx.obj
+[ 87%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Graphics_Driver_vertex.cxx.obj
+[ 88%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Copy_Surface_Driver.cxx.obj
+[ 88%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/GDI/Fl_GDI_Image_Surface_Driver.cxx.obj
+[ 88%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_win32.cxx.obj
+[ 89%] Building CXX object fltk/src/CMakeFiles/fltk.dir/fl_dnd_win32.cxx.obj
+[ 89%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_Native_File_Chooser_WIN32.cxx.obj
+[ 89%] Building CXX object fltk/src/CMakeFiles/fltk.dir/Fl_get_key_win32.cxx.obj
+[ 90%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/WinAPI/fl_WinAPI_platform_init.cxx.obj
+[ 90%] Building C object fltk/src/CMakeFiles/fltk.dir/flstring.c.obj
+[ 90%] Building C object fltk/src/CMakeFiles/fltk.dir/numericsort.c.obj
+[ 91%] Building C object fltk/src/CMakeFiles/fltk.dir/vsnprintf.c.obj
+[ 91%] Building C object fltk/src/CMakeFiles/fltk.dir/xutf8/is_right2left.c.obj
+[ 91%] Building C object fltk/src/CMakeFiles/fltk.dir/xutf8/is_spacing.c.obj
+[ 92%] Building C object fltk/src/CMakeFiles/fltk.dir/scandir_win32.c.obj
+[ 92%] Building C object fltk/src/CMakeFiles/fltk.dir/xutf8/case.c.obj
+[ 92%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/PostScript/Fl_PostScript.cxx.obj
+[ 92%] Building CXX object fltk/src/CMakeFiles/fltk.dir/drivers/PostScript/Fl_PostScript_image.cxx.obj
+[ 93%] Building C object fltk/src/CMakeFiles/fltk.dir/fl_call_main.c.obj
+[ 93%] Built target fltk_jpeg
+[ 93%] Built target cfltk
+[ 93%] Linking CXX static library ..\lib\libfltk.a
+[ 93%] Built target fltk
+[ 94%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_bitmap.cxx.obj
+[ 94%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_compatibility.cxx.obj
+[ 95%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/fl_write_png.cxx.obj
+[ 95%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/fl_images_core.cxx.obj
+[ 95%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_fselect.cxx.obj
+[ 95%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_timer.cxx.obj
+[ 95%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_free.cxx.obj
+[ 96%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_File_Icon2.cxx.obj
+[ 96%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_BMP_Image.cxx.obj
+[ 97%] Building CXX object fltk/src/CMakeFiles/fltk_forms.dir/forms_pixmap.cxx.obj
+[ 97%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_GIF_Image.cxx.obj
+[ 97%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_Anim_GIF_Image.cxx.obj
+[ 97%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_Help_Dialog.cxx.obj
+[ 98%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_ICO_Image.cxx.obj
+[ 98%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_JPEG_Image.cxx.obj
+[ 98%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_PNG_Image.cxx.obj
+[ 99%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_PNM_Image.cxx.obj
+[ 99%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_Image_Reader.cxx.obj
+[ 99%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/Fl_SVG_Image.cxx.obj
+[100%] Building CXX object fltk/src/CMakeFiles/fltk_images.dir/drivers/SVG/Fl_SVG_File_Surface.cxx.obj
+[100%] Linking CXX static library ..\lib\libfltk_forms.a
+[100%] Built target fltk_forms
+[100%] Linking CXX static library ..\lib\libfltk_images.a
+[100%] Built target fltk_images
+Install the project...
+-- Install configuration: "Release"
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libcfltk.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_box.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_browser.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_button.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_dialog.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_draw.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_enums.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_group.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_image.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_input.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_lock.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_macros.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_menu.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_misc.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_prefs.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_printer.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_surface.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_table.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_text.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_tree.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_utils.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_valuator.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_widget.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_widget.hpp
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/cfltk/cfl_window.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/cmake/cfltk/cfltkConfig.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/cmake/cfltk/cfltkConfig-release.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/cmake/cfltk/cfltkConfigVersion.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/pkgconfig/cfltk.pc
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Enumerations.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/filename.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Adjuster.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Anim_GIF_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_ask.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_attr.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Bitmap.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_BMP_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Box.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Browser_.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Cairo.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Cairo_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_callback_macros.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_casts.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Chart.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Check_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Check_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Choice.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Clock.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Color_Chooser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Copy_Surface.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Counter.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Device.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Dial.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Double_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_draw.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Export.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_File_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_File_Chooser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_File_Icon.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_File_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Fill_Dial.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Fill_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Flex.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Float_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_FormsBitmap.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_FormsPixmap.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Free.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_GIF_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Gl_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Graphics_Driver.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Grid.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Group.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Help_Dialog.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Help_View.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Hold_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Hor_Fill_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Hor_Nice_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Hor_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Hor_Value_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_ICO_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Image_Surface.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Input_.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Input_Choice.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Int_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_JPEG_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Light_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Line_Dial.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu_.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu_Bar.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu_Item.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Menu_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_message.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Multiline_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Multiline_Output.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Multi_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Multi_Label.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Native_File_Chooser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Nice_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Object.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Output.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Overlay_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Pack.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Paged_Device.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Pixmap.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Plugin.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_PNG_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_PNM_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Positioner.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_PostScript.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Preferences.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Printer.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Progress.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Radio_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Radio_Light_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Radio_Round_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Rect.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Repeat_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Return_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_RGB_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Roller.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Round_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Round_Clock.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Scheme.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Scheme_Choice.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Scroll.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Scrollbar.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Secret_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Select_Browser.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Shared_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Shortcut_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_show_colormap.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_show_input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Simple_Counter.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Simple_Terminal.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Single_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Spinner.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_string_functions.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_SVG_File_Surface.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_SVG_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Sys_Menu_Bar.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Table.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Table_Row.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tabs.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Text_Buffer.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Text_Display.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Text_Editor.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tile.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tiled_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Timer.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Toggle_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Toggle_Light_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Toggle_Round_Button.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tooltip.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tree.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tree_Item.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tree_Item_Array.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Tree_Prefs.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_types.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_utf8.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Valuator.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Value_Input.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Value_Output.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Value_Slider.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Widget.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Widget_Surface.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Window.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_Wizard.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_XBM_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/Fl_XPM_Image.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/forms.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/gl.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/gl2opengl.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/glu.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/glut.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/gl_draw.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/mac.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/math.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/names.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/platform.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/platform_types.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/wayland.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/win32.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/x.H
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/x11.H
+-- Up-to-date: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/fl_config.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/CMake/FLTK-Targets.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/CMake/FLTK-Targets-release.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/CMake/FLTKConfig.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/CMake/FLTK-Functions.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/CMake/UseFLTK.cmake
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/bin/fltk-config
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/man/man1/fltk-config.1
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/share/man/man3/fltk.3
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk_z.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/zconf.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/zlib.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/zutil.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk_jpeg.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/jconfig.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/jerror.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/jmorecfg.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/jpeglib.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/fltk_jpeg_prefix.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk_png.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/png.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/pngconf.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/pnglibconf.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/include/FL/images/pngprefix.h
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk_forms.a
+-- Installing: C:/Users/sebam/Documents/UniversalUI/UniversalUI-Test/target/debug/build/fltk-sys-294762bb2a49c416/out/lib/libfltk_images.a
+cargo:root=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\build
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\build\Release
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\lib
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\lib64
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\lib\Release
+cargo:rustc-link-search=native=C:\Users\sebam\Documents\UniversalUI\UniversalUI-Test\target\debug\build\fltk-sys-294762bb2a49c416\out\lib64\Release
+cargo:rustc-link-lib=static=cfltk
+cargo:rustc-link-lib=static=fltk
+cargo:rustc-link-lib=static=fltk_images
+cargo:rustc-link-lib=static=fltk_png
+cargo:rustc-link-lib=static=fltk_jpeg
+cargo:rustc-link-lib=static=fltk_z
+cargo:rustc-link-lib=dylib=ws2_32
+cargo:rustc-link-lib=dylib=comctl32
+cargo:rustc-link-lib=dylib=gdi32
+cargo:rustc-link-lib=dylib=oleaut32
+cargo:rustc-link-lib=dylib=ole32
+cargo:rustc-link-lib=dylib=uuid
+cargo:rustc-link-lib=dylib=shell32
+cargo:rustc-link-lib=dylib=advapi32
+cargo:rustc-link-lib=dylib=comdlg32
+cargo:rustc-link-lib=dylib=winspool
+cargo:rustc-link-lib=dylib=user32
+cargo:rustc-link-lib=dylib=kernel32
+cargo:rustc-link-lib=dylib=odbc32
+cargo:rustc-link-lib=dylib=gdiplus
+cargo:rustc-link-lib=supc++
+cargo:rustc-link-lib=gcc
